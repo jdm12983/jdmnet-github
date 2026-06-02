@@ -80,6 +80,7 @@ nav ul {
   }
   .sidebar {
     grid-column: col-start 11 / span 2;
+    grid-row: 2 / 4;
   }
   .ads {
     grid-column: col-start 11 / span 2;
