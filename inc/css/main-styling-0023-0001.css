@@ -1,0 +1,1174 @@
+/*
+ * FILE:      main-styling-0022-0010.css [non-scss version]
+ * PURPOSE:   CSS styling for jdmnet.[net|org];
+ *            edit this file; then minify on: https://csscompressor.net/ or https://www.minifier.org/
+ * LAST EDIT: Wednesday, May 06, 2026; 03:34:38 AM
+ */
+
+/*
+ * Prefixed by https://autoprefixer.github.io
+ * PostCSS: v8.4.14,
+ * Autoprefixer: v10.4.7
+ * Browsers: last 4 version
+ */
+
+/* HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+/* expletus-sans-regular - latin */
+@font-face {
+  font-family: "Expletus Sans";
+  src: local(""),
+       url("../fonts/expletus-sans-v19-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url("../fonts/expletus-sans-v19-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* varela-round-regular - latin */
+@font-face {
+  font-family: "Varela Round";
+  src: local(""),
+       url("../fonts/varela-round-v13-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url("../fonts/varela-round-v13-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+:root {
+  /*--main-fontfamily:  Verdana, Geneva, Arial, Helvetica, sans-serif;*/
+  --main-fontfamily:  "Varela Round", Verdana, Geneva, Arial, Helvetica, sans-serif; /* main website font */
+  --gold-color:       #b89b38;
+  --gold-85-percent:  rgba(184, 155, 56, 0.85);
+  --gold-100-percent: rgba(184, 155, 56, 1.00);
+}
+
+html {
+  color: #222222;
+/*  font-size: 1em; */
+  font-size: 100%;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  text-shadow: none;
+  background-color: #b3d4fc;
+  background-color: rgba(179, 212, 252, 0.85);
+}
+
+::selection {
+  text-shadow: none;
+  background-color: #b3d4fc;
+  background-color: rgba(179, 212, 252, 0.85);
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0.5rem 0.25rem 0.5rem 0.25rem;
+  padding: 0;
+  font-family: var(--main-fontfamily);
+/*  font-size: 100%; */
+  text-align: left;
+  color: #101010;
+  background-color: #f3f5f5;
+}
+
+a:link,
+a:active,
+a:visited,
+a:hover {
+  color: #101010;
+}
+
+p {
+  line-height: 1.8rem;
+  font-size: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.9em;
+}
+
+h3 {
+  font-size: 1.8em;
+}
+
+h4 {
+  font-size: 1.7em;
+}
+
+h5 {
+  font-size: 1.6em;
+}
+
+h6 {
+  font-size: 1.5em;
+}
+
+ul li {
+  list-style-type: square;
+}
+
+abbr {
+  border-bottom: 1px dotted #cccc99;
+  cursor: help;
+}
+
+img,
+video {
+  height: auto;
+}
+
+input,
+textarea,
+select,
+button {
+  padding: 0.25rem 1rem;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+label {
+  display: inline-block;
+}
+
+input[type=date],
+input[type=datetime-local],
+input[type=datetime],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=url],
+input[type=week],
+input[type=file],
+select,
+textarea {
+  /*padding: 0.75rem;*/
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #101010;
+  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 1.00);
+}
+
+input[type=color] {
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 1.00);
+}
+
+button,
+input[type=button],
+input[type=submit],
+input[type=reset] {
+  padding: 0.25rem 1rem;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #101010;
+  background-color: var(--gold-color);
+  background-color: var(--gold-85-percent);
+}
+
+input:focus,
+input:hover,
+input[type=checkbox]:focus + label,
+input[type=checkbox]:hover + label,
+input[type=radio]:focus + label,
+input[type=radio]:hover + label,
+select:focus,
+select:hover,
+textarea:focus,
+textarea:hover {
+  border: 1px solid #000000;
+  color: #101010;
+  background-color: #b3d4fc;
+  background-color: rgba(179, 212, 252, 0.10);
+}
+
+button:focus,
+button:hover,
+input[type=button]:focus,
+input[type=reset]:focus,
+input[type=submit]:focus,
+input[type=button]:hover,
+input[type=reset]:hover,
+input[type=submit]:hover {
+  border: 1px solid #101010;
+  color: #101010;
+  background-color: var(--gold-color);
+}
+
+button:disabled,
+input[type=button]:disabled,
+input[type=reset]:disabled,
+input[type=submit]:disabled {
+  border: 1px solid #cccccc;
+  color: #6d6d6d;
+  background-color: var(--gold-color);
+  background-color: var(--gold-85-percent);
+  cursor: default;
+}
+
+button * {
+  pointer-events: none;
+}
+
+/* Set font-size on Form Elements for a Better Mobile Experience */
+/* https://github.com/AllThingsSmitty/css-protips?tab=readme-ov-file#set-font-size-on-form-elements-for-a-better-mobile-experience */
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  font-size: 1em;
+}
+
+blockquote {
+  padding: 0 0.625rem 0.625rem 0.625rem;
+  margin: 1.25rem;
+  border-left: 3px solid #c7c7c7;
+  font-style: italic;
+}
+
+blockquote ol:last-child,
+blockquote p:last-child,
+blockquote ul:last-child {
+  margin-bottom: 0;
+}
+
+code,
+kbd,
+pre,
+samp,
+tt {
+  font-family: "Courier New", Courier, monospace !important;
+}
+
+code,
+pre {
+  vertical-align: baseline;
+}
+
+code {
+  padding: 0.125rem 0.25rem;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #c7254e;
+  background-color: #c1bcbd;
+}
+
+pre {
+  -webkit-overflow-scrolling: touch;
+  display: block;
+  margin: 0.3125rem;
+  padding: 0.3125rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  overflow-x: auto;
+}
+
+pre code {
+  display: block;
+  padding: 0;
+  background-color: transparent;
+  overflow-x: auto;
+  font-family: "Courier New", monospace !important;
+}
+
+a code {
+  padding: 0;
+}
+
+kbd {
+  padding: 0.125rem 0.25rem 0.125rem 0.25rem;
+  border-radius: 3px;
+  color: #ffffff;
+  background-color: #333333;
+}
+
+mark {
+  background-color: #fff2b1;
+}
+
+dl {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-left: 0;
+  padding: 0.25rem;
+}
+
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 0.625rem;
+}
+
+figure {
+  margin: 0;
+}
+
+
+/*
+ * Define custom tags
+ */
+
+/*
+ * add border and color for temp testing purposes
+ * NOT to be used on live site.
+ */
+.test-one {
+  border: 1px dotted rgba(0, 0, 0, 1.00);
+  background-color: rgba(127, 255, 212, 0.30);
+}
+
+/* Same as .test-one ; but, no border */
+.test-two {
+  background-color: rgba(127, 255, 212, 0.30);
+}
+
+/*
+ * Make a "block item"; center it horizontally
+ */
+.block-horizontal-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/*
+ * Make Text Bold
+ */
+.font-bold {
+  font-weight: 700;
+}
+
+/*
+ * Make Text Italic
+ */
+.font-italic {
+  font-style: italic;
+}
+
+/*
+ * Changed to using "Expletus Sans" font
+ */
+.font-expletus-sans {
+  font-family: "Expletus Sans", Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+/*
+ * Change font to "small-caps" variant
+ */
+.font-small-cap {
+  font-variant: small-caps;
+}
+
+/*
+ * Set Widths
+ */
+/* Set Widths - 100% */
+.width-100-percent {
+  width: 100%;
+}
+
+/* Set Widths - 75% */
+.width-75-percent {
+  width: 75%;
+}
+
+/* Set Widths - 50% */
+.width-50-percent {
+  width: 50%;
+}
+
+/* Set Widths - 25% */
+.width-25-percent {
+  width: 25%;
+}
+
+/*
+ * Text alignment
+ */
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-justify {
+  text-align: justify;
+}
+
+.line-height-2rem {
+  line-height: 2rem;
+}
+
+/*
+ * Red "error" coloring
+ */
+.error {
+  color: #ff4500;
+}
+
+/*
+ * left-floating "columns"
+ */
+.column-100-percent {
+  float: left;
+  width: 100%;
+}
+
+.column-75-percent {
+  float: left;
+  width: 75%;
+}
+
+.column-50-percent {
+  float: left;
+  width: 50%;
+}
+
+.column-25-percent {
+  float: left;
+  width: 25%;
+}
+
+/*
+ * Styling for "responsive" images
+ */
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+ * Use with " blockquote " tag when you want to hide the left-side border
+ */
+.no-line-blockquote {
+  border-left: none;
+}
+
+/*
+ * Left, Right, and Centered "blocks"
+ */
+.block-left {
+  display: block;
+  float: left;
+}
+
+.block-right {
+  display: block;
+  float: right;
+}
+
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+ * Center vertically; right-align horizontally
+ * Using "flex" boxes
+ */
+.center-vertical-right-horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*
+ * Center vertically; left-align horizontally
+ * Using "flex" boxes
+ */
+.center-vertical-left-horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*
+ * Center vertically; center horizontally
+ * Using "flex" boxes
+ */
+.center-vertical-center-horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*
+ * "spacers", blank/empty "boxes" to add spaces within a web page for layouts/visual design
+ */
+
+.spacer-5px-h {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 5px;
+}
+
+.spacer-10px-h {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 10px;
+}
+
+.spacer-50px-h {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 50px;
+/*  background-color: #808080; */ /* uncomment this line only when needing to see the spacer */
+}
+
+.right-side-space-3px {
+  margin-right: 3px;
+}
+
+
+/* Blue Underline Color */
+.blue-underline {
+  text-decoration-color: #4930d4;
+}
+
+/*
+ * Overall page layout classes
+ */
+
+.site-container {
+  margin: 0 auto 0 auto;
+  padding: 0.125rem;
+  width: 100%;
+  min-width: 18.75rem;
+  max-width: 75rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.page-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.page-header {
+  padding: 0.125rem;
+  width: 100%;
+  height: 1.875rem;
+  border: 1px solid var(--gold-color);
+  border-radius: 6px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.page-header-secondary {
+  display: inherit;
+}
+
+.page-left-column {
+  margin: 0;
+  padding: 0;
+  min-width: 8.5rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.page-left-column-secondary {
+  display: inherit;
+}
+
+.page-middle-column {
+  margin: -0.75rem 0 0 0;
+  padding: 0 0.5rem 0 0.5rem;
+  overflow-x: hidden;
+  width: 100%;
+  text-align: left;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.page-middle-column-secondary {
+  display: inherit;
+}
+
+.page-middle-column main,
+.page-middle-column-secondary main {
+  width: 100%;
+}
+
+.page-right-column {
+  margin: 0;
+  padding: 0;
+  min-width: 8.5rem;
+  width: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.page-right-column-secondary {
+  display: inherit;
+}
+
+.page-footer {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid var(--gold-color);
+}
+
+.page-footer-secondary {
+  display: inherit;
+}
+
+/* 
+ * Main page copyright-text text
+ */
+.copyright-text {
+  text-align: center;
+  font-size: 85%;
+  font-weight: 700;
+}
+
+/*
+ * "Gold" colored outline
+ */
+.gold-outline {
+  margin: 0;
+  padding: 0.125rem;
+  border: 1px solid var(--gold-color);
+  border-radius: 6px;
+}
+
+/*
+ * "Gold" colored/filled box
+ */
+.gold-box {
+  padding: 0 0.125rem 0 0.125rem;
+  white-space: nowrap;
+  border: 1px solid var(--gold-color);
+  border-radius: 4px;
+  background-color: var(--gold-color);
+}
+
+.gold-box-h1 {
+  margin: 0;
+  font-size: 100%;
+}
+
+/*
+ * Formatting for PayPal Info
+ */
+.paypal-info-table {
+  margin: auto;
+  width: 95%;
+  display: table;
+  border-style: none;
+  border-collapse: collapse;
+}
+                  
+.paypal-info-tr {
+  display: table-row;
+}
+                    
+.paypal-info-td-left {
+  display: table-cell;
+  padding: 0 0.5rem 0 0.5rem;
+  min-width: 10%;
+  width: 11%;
+  text-align: center;
+  vertical-align: middle;
+}
+                      
+.paypal-info-td-right {
+  display: table-cell;
+  padding: 0 0.5rem 0 0.5rem;
+  min-width: 89%;
+  max-width: 90%;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.paypal-info-payments {
+  text-align: center;
+}
+
+.paypal-info-payments img {
+  margin: 0.125rem 0.5rem 0.125rem 0.5rem;
+  display: inline-block;
+}
+
+.paypal-info-seal {
+  min-width: 5rem;
+  min-height: 5rem;
+}
+
+/*
+ * Formatting specific to the "Contact" page
+ */
+#contact-container label {
+  font-variant: small-caps;
+  font-weight: 700;
+  text-align: right;
+}
+
+#contact-container input[type=text],
+#contact-container select,
+#contact-container textarea {
+  padding: 0.75rem;
+}
+
+#contact-container .contact-label-a {
+  height: 2.8125rem;
+}
+
+#contact-container .contact-label-b {
+  height: 3.9375rem;
+}
+
+/*
+ * "Top"/"Back to Top" button
+ */
+#my-btn {
+  display: none;
+  margin: 0;
+  padding: 0.1875rem;
+  position: fixed;
+  left: 0.6rem;
+  bottom: 0.6rem;
+  z-index: 99;
+  width: 35px;
+  height: 30px;
+  border: 1px solid #101010;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 90%;
+}
+
+.fontawesome-custom-1 {
+  text-decoration: none;
+  color: #303030;
+}
+
+.work-day {
+  display: inline-block;
+  width: 7.8125rem;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   Media Queries for Responsive Design.
+   ========================================================================== */
+
+/*
+ * Adjust layout based on screen size
+ */
+
+@media screen and (min-width: 67.25em) {
+  .page-left-column-secondary {
+    width: 13%;
+  }
+
+  .page-middle-column-secondary {
+    width: 74%;
+  }
+
+  .page-right-column-secondary {
+    width: 13%;
+  }
+}
+
+@media screen and (max-width: 67.1875em) {
+  .page-left-column-secondary {
+    width: 20%;
+  }
+
+  .page-middle-column-secondary {
+    width: 80%;
+  }
+
+  .page-right-column-secondary {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 49.9375em) {
+  .paypal-info-td-left {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 49.875em) {
+  .contact-label-a {
+    text-align: left;
+  }
+
+  /*
+   * "columns"
+   */
+  .column-25-percent,
+  .column-50-percent,
+  .column-75-percent,
+  .column-100-percent,
+  #contact-container input,
+  #contact-container select,
+  #contact-container textarea {
+    width: 100%;
+  }
+
+  /*
+   * Center vertically; left-align horizontally
+   * for smaller screens. (798px and lower)
+   */
+  .center-vertical-left-horizontalb {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 44.25em) {
+  .page-left-column-secondary {
+    width: 100%;
+  }
+
+  .page-middle-column {
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-middle-column-secondary {
+    width: 100%;
+  }
+
+  .page-right-column-secondary {
+    display: none;
+  }
+}
+
+/* Hide AddToAny vertical share bar when screen is less than 981 pixels wide */
+@media screen and (max-width: 980px) {
+    .a2a_floating_style.a2a_vertical_style { display: none; }
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #ffffff !important;
+    color: #000000 !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+  .page-left-column-secondary,
+  .page-right-column-secondary {
+    display: none !important;
+  }
+
+  .gold-outline,
+  .gold-box {
+    border-style: none !important;    
+  }
+}

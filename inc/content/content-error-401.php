@@ -1,0 +1,35 @@
+<?php
+
+/*
+ * FILE:      content-error-401.php
+ * PURPOSE:   HTML for Error 401 page.
+ * LAST EDIT: Wednesday, May 06, 2026; 11:57:20 AM
+ */
+
+/* indent 10 spaces to start */
+
+?>
+          <main class="block-horizontal-center">
+
+            <article>
+
+              <header>
+                <h1 class="font-expletus-sans">There has been an error!</h1>
+              </header>
+
+              <p>Error 401 : Unauthorized</p>
+              <p>The server is looking for some encryption key from the client and is not getting it. Also, the wrong password may have been entered. Try it again, paying close attention to case sensitivity.</p>
+
+            </article>
+
+            <p>&nbsp;</p>
+
+            <div class="spacer-50px-h"></div>
+            <div class="spacer-50px-h"></div>
+
+          </main>
+<?php
+
+
+
+?>
