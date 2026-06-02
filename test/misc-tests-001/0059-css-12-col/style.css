@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  gap: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* my custom stuff - start */
+
+/* Set Line Height */
+.line-height-2rem {
+  line-height: 2rem;
+}
+
+/* 10px Top Margin */
+.top-space-10px {
+  margin-top: 10px;
+}
+
+/* 3px Right-Side Margin */
+.right-side-space-3px {
+  margin-right: 3px;
+}
+
+/* Blue Underline Color */
+.blue-underline {
+  text-decoration-color: #4930d4;
+}
+
+.fontawesome-custom-1 {
+  text-decoration: none;
+  color: #000000;
+  /* color: #303030; */
+}
+
+/* my custom stuff - end */
+
+/* Mobile first */
+.container > * {
+  border: 1px solid green;
+  background-color: beige;
+  padding: 10px;
+  grid-column: col-start / span 12;
+}
+
+@media (min-width: 576px) {
+  .sidebar {
+    grid-column: col-start / span 3;
+    grid-row: 3;
+  }
+  .ads {
+    grid-column: col-start / span 3;
+  }
+  .content, .footer {
+    grid-column: col-start 4 / span 9;
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav {
+    grid-column: col-start / span 2;
+    grid-row: 2 / 4;
+  }
+  .content {
+    grid-column: col-start 3 / span 8;
+    grid-row: 2 / 4;
+  }
+  .sidebar {
+    grid-column: col-start 11 / span 2;
+  }
+  .ads {
+    grid-column: col-start 11 / span 2;
+  }
+  .footer {
+    grid-column: col-start / span 12;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+}
