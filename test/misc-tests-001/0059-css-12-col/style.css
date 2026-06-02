@@ -2,10 +2,12 @@
   box-sizing: border-box;
 }
 
+/* 24 columns, each 1 fraction unit wide */
 .container {
   display: grid;
-  grid-template-columns: repeat(12, [col-start] 1fr);
-  gap: 5px;
+  /* grid-template-columns: repeat(12, [col-start] 1fr); */
+  grid-template-columns: repeat(24, [col-start] 1fr); 
+  gap: 10px;
 }
 
 nav ul {
@@ -49,6 +51,7 @@ nav ul {
   border: 1px solid green;
   background-color: beige;
   padding: 10px;
+  /* grid-column: col-start / span 12; */
   grid-column: col-start / span 12;
 }
 
@@ -79,11 +82,11 @@ nav ul {
   }
   .content {
     /* grid-column: col-start 3 / span 8; */
-    grid-column: col-start 4 / span 7;
+    grid-column: col-start 4 / span 18;
     grid-row: 2 / 4;
   }
   .sidebar {
-    grid-column: col-start 10 / span 3;
+    grid-column: col-start 22 / span 3;
     grid-row: 2 / 4;
   }
   /*
@@ -92,7 +95,8 @@ nav ul {
   }
   */
   .footer {
-    grid-column: col-start / span 12;
+    /* grid-column: col-start / span 12; */
+    grid-column: col-start / span 24;
   }
   nav ul {
     flex-direction: column;
