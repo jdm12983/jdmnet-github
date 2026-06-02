@@ -52,7 +52,7 @@ nav ul {
   background-color: beige;
   padding: 10px;
   /* grid-column: col-start / span 12; */
-  grid-column: col-start / span 12;
+  grid-column: col-start / span 24;
 }
 
 @media (min-width: 576px) {
